@@ -1,3 +1,6 @@
+from __future__ import annotations
+
+
 class DefaultTable(object):
     def __init__(self, tag: str | None = None) -> None: ...
 
