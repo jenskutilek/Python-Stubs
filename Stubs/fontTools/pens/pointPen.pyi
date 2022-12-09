@@ -16,8 +16,8 @@ class AbstractPointPen:
     ) -> None: ...
     def addComponent(
         self,
-        baseGlyphName: str,
-        transform: Tuple[float, float, float, float, float, float],
+        glyphName: str,
+        transformation: Tuple[float, float, float, float, float, float],
         identifier: Optional[str] = None,
         **kwargs: Any
     ) -> None: ...
