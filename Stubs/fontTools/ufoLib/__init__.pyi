@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import enum
+
 from pathlib import Path
 from typing import Any, Dict, List, Tuple
 
@@ -16,14 +18,14 @@ class UFOWriter(UFOReader):
         validate: bool = True,
     ) -> None: ...
     def getGlyphSet(
-		self,
-		layerName=None,
-		defaultLayer=True,
-		glyphNameToFileNameFunc=None,
-		validateRead=None,
-		validateWrite=None,
-		expectContentsFile=False,
-	): ...
+        self,
+        layerName=None,
+        defaultLayer=True,
+        glyphNameToFileNameFunc=None,
+        validateRead=None,
+        validateWrite=None,
+        expectContentsFile=False,
+    ): ...
     def writeFeatures(self, features: str, validate=None) -> None: ...
     def writeGroups(self, groups: Dict[str, List[str]], validate=None) -> None: ...
     def writeInfo(self, info: Any, validate=None) -> None: ...
@@ -31,3 +33,7 @@ class UFOWriter(UFOReader):
     def writeLayerContents(self, layerOrder=None, validate=None) -> None: ...
     def writeLib(self, libDict: Dict[str, Any], validate=None) -> None: ...
     def close(self) -> None: ...
+
+class UFOFileStructure(enum.Enum):
+    ZIP = "zip"
+    PACKAGE = "package"
