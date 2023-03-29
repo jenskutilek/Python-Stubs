@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from defcon.objects.base import BaseObject
+from defcon.objects.info import Info
 from typing import List
 
 
@@ -45,8 +46,23 @@ class Font(BaseObject):
 
     lib = property(_get_lib, doc="The font's :class:`Lib` object.")
 
+    def _set_path(self, path: str) -> None:
+        ...
+
+    def _get_path(self) -> str | None:
+        ...
+
+    path = property(_get_path, _set_path, doc="The location of the file on disk. Setting the path should only be done when the user has moved the file in the OS interface. Setting the path is not the same as a save operation.")
+
     def __iter__(self):
         ...
+
+    def _get_info(self) -> Info:
+        ...
+
+    info = property(_get_info, doc="The font's :class:`Info` object.")
+
+    def keys(self): ...
 
     def save(
         self,
