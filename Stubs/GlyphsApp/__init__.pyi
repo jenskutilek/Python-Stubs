@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from typing import Any, Iterable, Iterator, List, Sequence
 from AppKit import NSIndexPath, NSPoint, NSRect
 

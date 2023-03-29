@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from io import BufferedReader, BytesIO
 from typing import BinaryIO, Optional, OrderedDict, Union
 

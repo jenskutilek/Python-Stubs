@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from fontTools.ttLib.tables.DefaultTable import DefaultTable
 from fontTools.ttLib.tables._g_l_y_f import table__g_l_y_f
 from io import BytesIO

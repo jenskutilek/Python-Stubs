@@ -1,5 +1,7 @@
-from typing import Any, Dict
+from __future__ import annotations
+
 from fontTools.pens.pointPen import AbstractPointPen
+from typing import Any, Dict
 
 
 class HashPointPen(AbstractPointPen):

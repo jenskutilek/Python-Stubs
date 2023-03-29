@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from asn1crypto.core import Integer, ObjectIdentifier, Sequence, SetOf
 
 

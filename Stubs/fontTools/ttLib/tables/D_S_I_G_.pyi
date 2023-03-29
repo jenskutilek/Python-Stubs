@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from typing import List, Literal, OrderedDict
 from fontTools.ttLib import TTFont
 from fontTools.ttLib.tables import DefaultTable

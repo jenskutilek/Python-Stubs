@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import json
 from _typeshed import Incomplete
 
