@@ -1,11 +1,10 @@
 from __future__ import annotations
 
 import json
-from _typeshed import Incomplete
 
+from _typeshed import Incomplete
 
 class BytesEncoder(json.JSONEncoder):
     def default(self, obj): ...
-
 
 def main(args: Incomplete | None = ...): ...

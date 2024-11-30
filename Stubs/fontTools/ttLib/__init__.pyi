@@ -1,9 +1,10 @@
 from __future__ import annotations
 
-from fontTools.ttLib.tables.DefaultTable import DefaultTable
-from fontTools.ttLib.tables._g_l_y_f import table__g_l_y_f
 from io import BytesIO
 from typing import Any, List, Optional, TypedDict, Union
+
+from fontTools.ttLib.tables._g_l_y_f import table__g_l_y_f
+from fontTools.ttLib.tables.DefaultTable import DefaultTable
 
 class KnownTable(TypedDict):
     glyf: table__g_l_y_f
@@ -33,8 +34,6 @@ class TTFont(object):
     def __setitem__(self, tag: str, table: Any) -> None: ...
     def getTableData(self, tag: str) -> bytes: ...
     def keys(self) -> List[str]: ...
-    def save(
-        self, file: Union[str, BytesIO], reorderTables: bool = True
-    ) -> None: ...
+    def save(self, file: Union[str, BytesIO], reorderTables: bool = True) -> None: ...
 
 def newTable(tag): ...

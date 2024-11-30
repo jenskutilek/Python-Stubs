@@ -3,9 +3,7 @@ from __future__ import annotations
 from typing import Any, Optional, Tuple
 
 class AbstractPointPen:
-    def beginPath(
-        self, identifier: Optional[str] = None, **kwargs: Any
-    ) -> None: ...
+    def beginPath(self, identifier: Optional[str] = None, **kwargs: Any) -> None: ...
     def endPath(self) -> None: ...
     def addPoint(
         self,
@@ -14,12 +12,12 @@ class AbstractPointPen:
         smooth: bool = False,
         name: Optional[str] = None,
         identifier: Optional[str] = None,
-        **kwargs: Any
+        **kwargs: Any,
     ) -> None: ...
     def addComponent(
         self,
         glyphName: str,
         transformation: Tuple[float, float, float, float, float, float],
         identifier: Optional[str] = None,
-        **kwargs: Any
+        **kwargs: Any,
     ) -> None: ...

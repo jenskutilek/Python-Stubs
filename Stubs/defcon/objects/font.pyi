@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from defcon.objects.base import BaseObject
-from defcon.objects.info import Info
 from typing import List
 
+from defcon.objects.base import BaseObject
+from defcon.objects.info import Info
 
 class Font(BaseObject):
     def __init__(
@@ -26,14 +26,9 @@ class Font(BaseObject):
         glyphComponentClass=None,
         glyphAnchorClass=None,
         glyphImageClass=None,
-    ):
-        ...
-
-    def _get_guidelines(self):
-        ...
-
-    def _set_guidelines(self, value: List):
-        ...
+    ): ...
+    def _get_guidelines(self): ...
+    def _set_guidelines(self, value: List): ...
 
     guidelines = property(
         _get_guidelines,
@@ -41,29 +36,25 @@ class Font(BaseObject):
         doc="An ordered list of :class:`Guideline` objects stored in the font. Setting this will post a *Font.Changed* notification along with any notifications posted by the :py:meth:`Font.appendGuideline` and :py:meth:`Font.clearGuidelines` methods.",
     )
 
-    def _get_lib(self):
-        ...
+    def _get_lib(self): ...
 
     lib = property(_get_lib, doc="The font's :class:`Lib` object.")
 
-    def _set_path(self, path: str) -> None:
-        ...
+    def _set_path(self, path: str) -> None: ...
+    def _get_path(self) -> str | None: ...
 
-    def _get_path(self) -> str | None:
-        ...
+    path = property(
+        _get_path,
+        _set_path,
+        doc="The location of the file on disk. Setting the path should only be done when the user has moved the file in the OS interface. Setting the path is not the same as a save operation.",
+    )
 
-    path = property(_get_path, _set_path, doc="The location of the file on disk. Setting the path should only be done when the user has moved the file in the OS interface. Setting the path is not the same as a save operation.")
-
-    def __iter__(self):
-        ...
-
-    def _get_info(self) -> Info:
-        ...
+    def __iter__(self): ...
+    def _get_info(self) -> Info: ...
 
     info = property(_get_info, doc="The font's :class:`Info` object.")
 
     def keys(self): ...
-
     def save(
         self,
         path: str | None = None,
@@ -71,5 +62,4 @@ class Font(BaseObject):
         removeUnreferencedImages=False,
         progressBar=None,
         structure=None,
-    ):
-        ...
+    ): ...

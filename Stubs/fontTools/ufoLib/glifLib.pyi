@@ -1,17 +1,16 @@
 from __future__ import annotations
 
+from pathlib import Path
+from typing import Any, Callable, Optional, Tuple
+
 from fontTools.pens.pointPen import AbstractPointPen
 from fontTools.ufoLib import _UFOBaseIO
-from pathlib import Path
-from typing import Any, Optional, Tuple, Callable
 
 class GLIFPointPen(AbstractPointPen):
     def __init__(
         self, element, formatVersion=None, identifiers=None, validate=True
     ): ...
-    def beginPath(
-        self, identifier: Optional[str] = None, **kwargs: Any
-    ) -> None: ...
+    def beginPath(self, identifier: Optional[str] = None, **kwargs: Any) -> None: ...
     def endPath(self) -> None: ...
     def addPoint(
         self,
