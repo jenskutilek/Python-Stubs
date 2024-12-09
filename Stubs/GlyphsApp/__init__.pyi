@@ -23,6 +23,8 @@ class GSGlyph:
     @property
     def name(self) -> str: ...
 
+class GSGlyphsInfo: ...
+
 class GSHint:
     def copy(self) -> GSHint: ...
     @property
@@ -83,6 +85,10 @@ class GSNode:
 class GSPath:
     @property
     def nodes(self) -> Sequence[GSNode]: ...
+
+class GSScriptingHandler:
+    @property
+    def sharedHandler(self) -> Any: ...
 
 class LayerHintsProxy:
     def __iter__(self) -> Iterator[GSHint]: ...
